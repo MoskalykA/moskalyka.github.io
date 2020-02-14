@@ -61,9 +61,13 @@
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script>
         
-        $.getJSON('api.json', function(data) {
+       fetch('api.json')
+        .then(function(response){
+            return response.json();
+        })
+        .then(function(data){
             console.log(data);
-        });
+        })
         
     </script>
     <script>
