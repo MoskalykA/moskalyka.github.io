@@ -1,3 +1,5 @@
 {
-  number : 10
+  stats: {
+    'number' : 10
+  }
 }
