@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoskalyykA</title>
-    <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/uikit.min.css" />
 </head>
 <body>
@@ -35,7 +34,7 @@
                     <h4 id="t9"></h4>
                     <h5>Emai: contact@cray-dev.fr</h5>
                     <h5>Discord: Opeta#1950</h5>
-                    <h5><a id="t10" href="https://cray-dev.fr"></a></h5>
+                    <h5>Site: <a id="t10" href="https://cray-dev.fr"></a></h5>
                 </div>
                 <div class="uk-card-footer">
                     <button id="t3" class="uk-button uk-button-primary" onclick="UIkit.modal(langage).show();"></button>
@@ -63,12 +62,7 @@
     <script src="js/uikit-icons.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script>
-        let language
-
-        $( document ).ready(function() {
-            UIkit.modal(langage).show();
-            setLang("english")
-        });
+        let language;
 
         function Notification(message, status, pos, timeout) {
             UIkit.notification({
@@ -93,7 +87,6 @@
                 document.getElementById("t7").innerHTML = "Français";
                 document.getElementById("t8").innerHTML = "Anglais";
                 document.getElementById("t9").innerHTML = "Autres informations";
-                document.getElementById("t10").innerHTML = "Mon site: https://cray-dev.fr";
 
             } 
             
@@ -108,10 +101,14 @@
                 document.getElementById("t7").innerHTML = "French";
                 document.getElementById("t8").innerHTML = "English";
                 document.getElementById("t9").innerHTML = "Other information";
-                document.getElementById("t10").innerHTML = "My site: https://cray-dev.fr";
 
             }
         }
+
+        $( document ).ready(function() {
+            UIkit.modal(langage).show();
+            setLang("english")
+        });
     </script>
 </body>
 </html>
