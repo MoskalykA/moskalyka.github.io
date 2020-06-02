@@ -63,6 +63,8 @@
     <script src="js/uikit-icons.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script>
+        let language;
+        
         function Notification(message, status, pos, timeout) {
             UIkit.notification({
                 message: message,
@@ -72,7 +74,9 @@
             });
         }
 
-        function setLang(language) {
+        function setLang(name) {
+            name = language
+            
             if(language == 'french') {
                 document.getElementById("t1").innerHTML = "Je suis Moskalyk Arthur, un jeune développeur Web. J'apprendre actuellement les langages suivant: Html, CSS, PHP, Javascript, Ruby, Java et C++";
                 document.getElementById("t2").innerHTML = "Voici le pourcentage de conaissance:";
