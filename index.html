@@ -54,6 +54,7 @@
                 <h3 id="t6"></h3>
                 <button id="t7" class="uk-button uk-button-primary uk-modal-close" onclick="setLang('french')"></button>
                 <button id="t8" class="uk-button uk-button-primary uk-modal-close" onclick="setLang('english')"></button>
+                <button id="t9" class="uk-button uk-button-primary uk-modal-close" onclick="setLang('spanish')"></button>
             </div>
         </div>
     </div>
@@ -62,8 +63,6 @@
     <script src="js/uikit-icons.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script>
-        let language;
-
         function Notification(message, status, pos, timeout) {
             UIkit.notification({
                 message: message,
@@ -73,11 +72,8 @@
             });
         }
 
-        function setLang(name) {
-            language = name
-
-            if(language == "french") {
-            
+        function setLang(language) {
+            if(language == 'french') {
                 document.getElementById("t1").innerHTML = "Je suis Moskalyk Arthur, un jeune développeur Web. J'apprendre actuellement les langages suivant: Html, CSS, PHP, Javascript, Ruby, Java et C++";
                 document.getElementById("t2").innerHTML = "Voici le pourcentage de conaissance:";
                 document.getElementById("t3").innerHTML = "Changer de langue";
@@ -86,12 +82,9 @@
                 document.getElementById("t6").innerHTML = "Veuillez appuyer sur le bouton correspondant à votre langue qui se trouve en dessous de ce texte !";
                 document.getElementById("t7").innerHTML = "Français";
                 document.getElementById("t8").innerHTML = "Anglais";
-                document.getElementById("t9").innerHTML = "Autres informations";
-
-            } 
-            
-            if(language == "english") {
-
+                document.getElementById("t9").innerHTML = "Espagnol";
+                document.getElementById("t10").innerHTML = "Autres informations";
+            } elseif(language == 'english') {
                 document.getElementById("t1").innerHTML = "I'm Moskalyk Arthur, a young web developer. I am currently learning the following languages: Html, CSS, PHP, Javascript, Ruby, Java and C++";
                 document.getElementById("t2").innerHTML = "Here's the knowledge percentage:";
                 document.getElementById("t3").innerHTML = "Change language";
@@ -100,14 +93,25 @@
                 document.getElementById("t6").innerHTML = "Please press the button that corresponds to your language which is below this text!";
                 document.getElementById("t7").innerHTML = "French";
                 document.getElementById("t8").innerHTML = "English";
-                document.getElementById("t9").innerHTML = "Other information";
-
+                document.getElementById("t9").innerHTML = "Spanish";
+                document.getElementById("t10").innerHTML = "Other information";
+            } elseif(language == 'spanish') {
+                document.getElementById("t1").innerHTML = "Soy Moskalyk Arthur, un joven desarrollador web. Actualmente estoy aprendiendo los siguientes idiomas: Html, CSS, PHP, Javascript, Ruby, Java y C++.";
+                document.getElementById("t2").innerHTML = "Aquí está el porcentaje de conocimiento:";
+                document.getElementById("t3").innerHTML = "Cambiar el idioma";
+                document.getElementById("t4").innerHTML = "Contáctame.";
+                document.getElementById("t5").innerHTML = "Elección del idioma";
+                document.getElementById("t6").innerHTML = "Por favor, pulse el botón que corresponde a su idioma que está debajo de este texto!";
+                document.getElementById("t7").innerHTML = "Francés";
+                document.getElementById("t8").innerHTML = "Inglés";
+                document.getElementById("t9").innerHTML = "Español";
+                document.getElementById("t10").innerHTML = "Otra información";
             }
         }
 
         $( document ).ready(function() {
             UIkit.modal(langage).show();
-            setLang("english")
+            setLang('english')
         });
     </script>
 </body>
