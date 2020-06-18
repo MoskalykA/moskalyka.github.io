@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoskalykA</title>
     <link rel="stylesheet" href="css/uikit.min.css">
+    <link rel="shortcut icon" href="https://file.cray-dev.com/github_pages_favicon.ico">
 </head>
 <body>
-    
     <section class="uk-section uk-background-secondary">
         <center>
             <div class="uk-card uk-card-default uk-width-1-2@m">
                 <div class="uk-card-header">
                     <div class="uk-grid-small uk-flex-middle" uk-grid>
                         <div class="uk-width-auto">
-                            <img class="uk-border-circle" width="80" height="80" src="https://moskalyka.github.io/img/45717749.gif">
+                            <img class="uk-border-circle" width="80" height="80" src="https://file.cray-dev.com/45717749.gif">
                         </div>
                         <div class="uk-width-expand">
                             <h3 class="uk-card-title uk-margin-remove-bottom">MosklaykA</h3>
@@ -22,105 +22,27 @@
                     </div>
                 </div>
                 <div class="uk-card-body">
-                    <h3 id="t1"></h3>
-                    <h4 id="t2"></h4>
+                    <h3>I'm Moskalyk Arthur, a young web developer. I am currently learning the following languages: Html, CSS, PHP, Javascript, Ruby, Java and C++</h3>
+                    <h4>Here's the knowledge percentage:</h4>
                     <h5>Html: <progress class="uk-progress" value="60" max="100"></progress></h5>
                     <h5>CSS: <progress class="uk-progress" value="15" max="100"></progress></h5>
                     <h5>PHP: <progress class="uk-progress" value="20" max="100"></progress></h5>
                     <h5>Javascript: <progress class="uk-progress" value="30" max="100"></progress></h5>
                     <h5>Ruby: <progress class="uk-progress" value="15" max="100"></progress></h5>
-                    <h5>Java: <progress class="uk-progress" value="10" max="100"></progress></h5>
+                    <h5>Java: <progress class="uk-progress" value="5" max="100"></progress></h5>
                     <h5>C++: <progress class="uk-progress" value="0" max="100"></progress></h5>
-                    <h4 id="t9"></h4>
-                    <h5>Emai: contact@cray-dev.fr</h5>
-                    <h5>Discord: Opeta#1950</h5>
-                    <h5>Site: <a href="https://cray-dev.fr">https://cray-dev.fr</a></h5>
+                    <h4>Other information</h4>
+                    <h5>Email: contact@cray-dev.com</h5>
+                    <h5>Discord: Arthur M#0038</h5>
+                    <h5>Website: <a href="https://cray-dev.com">https://cray-dev.com</a></h5>
                 </div>
                 <div class="uk-card-footer">
-                    <button id="t3" class="uk-button uk-button-primary" onclick="UIkit.modal(langage).show();"></button>
-                    <br>
-                    <a href="https://cray-dev.fr" id="t4" class="uk-button uk-button-primary"></a>
+                    <a href="https://cray-dev.com" class="uk-button uk-button-primary">Contact me</a>
                 </div>
             </div>
         </center>
     </section>
-
-    <div id="langage" uk-modal>
-        <div class="uk-modal-dialog">
-            <div class="uk-modal-header">
-                <h2 id="t5" class="uk-modal-title"></h2>
-            </div>
-            <div class="uk-modal-body">
-                <h3 id="t6"></h3>
-                <button id="t7" class="uk-button uk-button-primary uk-modal-close" onclick="setLang('french')"></button>
-                <button id="t8" class="uk-button uk-button-primary uk-modal-close" onclick="setLang('english')"></button>
-                <button id="t9" class="uk-button uk-button-primary uk-modal-close" onclick="setLang('spanish')"></button>
-            </div>
-        </div>
-    </div>
-
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script>
-        let language;
-        
-        function Notification(message, status, pos, timeout) {
-            UIkit.notification({
-                message: message,
-                status: status,
-                pos: pos,
-                timeout: timeout
-            });
-        }
-
-        function setLang(name) {
-            name = language
-            
-            if(language == 'french') {
-                document.getElementById("t1").innerHTML = "Je suis Moskalyk Arthur, un jeune développeur Web. J'apprendre actuellement les langages suivant: Html, CSS, PHP, Javascript, Ruby, Java et C++";
-                document.getElementById("t2").innerHTML = "Voici le pourcentage de conaissance:";
-                document.getElementById("t3").innerHTML = "Changer de langue";
-                document.getElementById("t4").innerHTML = "Me contacter";
-                document.getElementById("t5").innerHTML = "Choix de langue";
-                document.getElementById("t6").innerHTML = "Veuillez appuyer sur le bouton correspondant à votre langue qui se trouve en dessous de ce texte !";
-                document.getElementById("t7").innerHTML = "Français";
-                document.getElementById("t8").innerHTML = "Anglais";
-                document.getElementById("t9").innerHTML = "Espagnol";
-                document.getElementById("t10").innerHTML = "Autres informations";
-            }
-            
-            if(language == 'english') {
-                document.getElementById("t1").innerHTML = "I'm Moskalyk Arthur, a young web developer. I am currently learning the following languages: Html, CSS, PHP, Javascript, Ruby, Java and C++";
-                document.getElementById("t2").innerHTML = "Here's the knowledge percentage:";
-                document.getElementById("t3").innerHTML = "Change language";
-                document.getElementById("t4").innerHTML = "Contact me";
-                document.getElementById("t5").innerHTML = "Choice of language";
-                document.getElementById("t6").innerHTML = "Please press the button that corresponds to your language which is below this text!";
-                document.getElementById("t7").innerHTML = "French";
-                document.getElementById("t8").innerHTML = "English";
-                document.getElementById("t9").innerHTML = "Spanish";
-                document.getElementById("t10").innerHTML = "Other information";
-            } 
-            
-            if(language == 'spanish') {
-                document.getElementById("t1").innerHTML = "Soy Moskalyk Arthur, un joven desarrollador web. Actualmente estoy aprendiendo los siguientes idiomas: Html, CSS, PHP, Javascript, Ruby, Java y C++.";
-                document.getElementById("t2").innerHTML = "Aquí está el porcentaje de conocimiento:";
-                document.getElementById("t3").innerHTML = "Cambiar el idioma";
-                document.getElementById("t4").innerHTML = "Contáctame.";
-                document.getElementById("t5").innerHTML = "Elección del idioma";
-                document.getElementById("t6").innerHTML = "Por favor, pulse el botón que corresponde a su idioma que está debajo de este texto!";
-                document.getElementById("t7").innerHTML = "Francés";
-                document.getElementById("t8").innerHTML = "Inglés";
-                document.getElementById("t9").innerHTML = "Español";
-                document.getElementById("t10").innerHTML = "Otra información";
-            }
-        }
-
-        $( document ).ready(function() {
-            UIkit.modal(langage).show();
-            setLang('english');
-        });
-    </script>
 </body>
 </html>
