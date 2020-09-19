@@ -1,6 +1,6 @@
 const head = document.getElementsByTagName('head')[0];
 const style = document.createElement('link');
-style.href = 'https://cdn.cray-dev.com/cray_css/css/cray-css-minimize.css';
+style.href = 'css/cray-css-minimize.css';
 style.type = 'text/css';
 style.rel = 'stylesheet';
 head.append(style);
