@@ -1,0 +1,55 @@
+:root {
+    --shadow:0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --ring-offset-shadow:0 0 #0000;
+    --ring-shadow:0 0 #0000;
+}
+
+.card_open {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-name: card_open;
+    animation-name: card_open;
+}
+
+@-webkit-keyframes card_open {
+    from {
+        height: 1%;
+    }
+
+    to {
+        height: 100%;
+    }
+}
+
+@keyframes card_open {
+    from {
+        height: 1%;
+    }
+
+    to {
+        height: 100%;
+    }
+}
+
+@font-face {
+    font-family: 'Kumbh Sans Bold';
+    src: url('../fonts/KumbhSans-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kumbh Sans Regular';
+    src: url('../fonts/KumbhSans-Regular.ttf');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+.font1 {
+    font-family: 'Kumbh Sans Bold', serif;
+}
+
+.font2 {
+    font-family: 'Kumbh Sans Regular', serif;
+}

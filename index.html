@@ -1,35 +1,94 @@
 <!DOCTYPE html>
-<html>
-<html manifest="cray_css.appcache" lang="en">
+<!--suppress XmlDuplicatedId -->
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>MoskalykA - Portfolio</title>
     <meta name="description" content="This site is the portfolio site of MoskalykA (creator of cray-dev)">
-    <link rel="icon" href="https://file.cray-dev.com/arthur_logo.png">
+    <title>MoskalykA</title>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" href="images/newlogo.png">
 </head>
-<body class="cray-bg-wet-asphalt">
-    <div class="cray-container cray-w-50 cray-plr-10 cray-bg-white" style="margin: 15px auto;">
-        <div class="cray-text-center">
-            <img src="https://file.cray-dev.com/arthur_logo.png">
+<body style="background-color: #34495e;">
+    <div class="container w-1/2 px-10 bg-white shadow-2xl" style="margin: 15px auto;">
+        <div class="flex items-center justify-center mt-4">
+            <img alt="My logo" src="images/newlogo.png" width="256" height="256">
         </div>
         <div>
-            <p class="cray-font-kumbh-sans-1">MoskalykA</p>
-            <p class="cray-font-kumbh-sans-2">Young French web developer.</p>
+            <p class="font1 mt-4">MoskalykA</p>
+            <p class="font2 mb-4">Young French web developer.</p>
+        </div>
+        <div class="flex items-center justify-center pt-4">
+            <img alt="Discord icon" id="card_open_discord" class="mr-4" src="images/discord.png" width="64" height="64">
+            <img alt="Github icon" id="card_open_github" class="mr-4" src="images/github.png" width="64" height="64">
+            <img alt="Stack-Overflow icon" id="card_open_stack" class="mb-4" src="images/stack-overflow.png" width="64" height="64">
+        </div>
+    </div>
 
-            <br>
-
-            <div class="cray-text-center">
-                <a href="https://codepen.io/ezezbot" target="blank"><img src="https://file.cray-dev.com/codepen-min.svg" height="30" width="30" /></a>
-                <a href="https://twitter.com/moskalyka" target="blank"><img src="https://file.cray-dev.com/twitter-min.svg" a height="30" width="30" /></a>
-                <a href="https://stackoverflow.com/users/14191707" target="blank"><img src="https://file.cray-dev.com/stackoverflow-min.svg" alt="14191707" height="30" width="30" /></a>
-                <a href="https://www.youtube.com/channel/UCHTDd7k8zq3eyqbGH-oAvdg" target="blank"><img src="https://file.cray-dev.com/youtube-min.svg" height="30" width="30" /></a>
+    <div id="card_panel_discord" class="main-modal fixed w-full inset-0 z-50 overflow-hidden flex justify-center items-center hidden">
+        <div class="modal-container bg-white w-4/12 md:max-w-11/12 mx-auto z-50 overflow-y-auto shadow-2xl">
+            <div class="modal-content py-4 text-left px-6">
+                <div class="flex justify-between items-center pb-3">
+                    <p class="text-2xl font-bold text-gray-500">Discord</p>
+                    <div id="card_close_discord" class="modal-close cursor-pointer z-50">
+                        <svg class="fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                            <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="my-5 mr-5 ml-5 flex justify-center">
+                    <p>At the moment I don't have a discord server, so here is my nickname and my discord hashtag.</p>
+                </div>
+                <div class="flex justify-end pt-2 space-x-14">
+                    <p>Agent Arthur#0038</p>
+                </div>
             </div>
         </div>
     </div>
 
-    <script data-ad-client="ca-pub-7673485182691429" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script src="https://requirejs.org/docs/release/2.3.6/minified/require.js"></script>
+    <div id="card_panel_github" class="main-modal fixed w-full inset-0 z-50 overflow-hidden flex justify-center items-center hidden">
+        <div class="modal-container bg-white w-4/12 md:max-w-11/12 mx-auto z-50 overflow-y-auto shadow-2xl">
+            <div class="modal-content py-4 text-left px-6">
+                <div class="flex justify-between items-center pb-3">
+                    <p class="text-2xl font-bold text-gray-500">Github</p>
+                    <div id="card_close_github" class="modal-close cursor-pointer z-50">
+                        <svg class="fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                            <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="my-5 mr-5 ml-5 flex justify-center">
+                    <p>Hey hey, I have a Github for this, so you'll find it below.</p>
+                </div>
+                <div class="flex justify-end pt-2 space-x-14">
+                    <a href="https://github.com/MoskalykA/" class="py-4 px-8 bg-green-400 hover:bg-green-300 border-gray-500 text-blue-50 hover:text-white rounded-md block" target="_blank">Go to Github</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="card_panel_stack" class="main-modal fixed w-full inset-0 z-50 overflow-hidden flex justify-center items-center hidden">
+        <div class="modal-container bg-white w-4/12 md:max-w-11/12 mx-auto z-50 overflow-y-auto shadow-2xl">
+            <div class="modal-content py-4 text-left px-6">
+                <div class="flex justify-between items-center pb-3">
+                    <p class="text-2xl font-bold text-gray-500">Stack-Overflow</p>
+                    <div id="card_close_stack" class="modal-close cursor-pointer z-50">
+                        <svg class="fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                            <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="my-5 mr-5 ml-5 flex justify-center">
+                    <p>Hey hey, I also have a Stackoverflow profile, so you'll find it below but it's a bit empty.</p>
+                </div>
+                <div class="flex justify-end pt-2 space-x-14">
+                    <a href="https://stackoverflow.com/users/14191707/moskalyka" class="py-4 px-8 bg-green-400 hover:bg-green-300 border-gray-500 text-blue-50 hover:text-white rounded-md block" target="_blank">Go to Github</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="js/index.js"></script>
 </body>
 </html>
